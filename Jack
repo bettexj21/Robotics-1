@@ -1,0 +1,59 @@
+#include <kipr/botball.h>
+//DECLARE VARIABLES// 
+int speed = 50;
+int pause = 1000;
+int dak = 2000;
+int lmotor = 2;
+int rmotor = 0;
+
+//FUNCTION PROTOTYPES//
+  void forward();
+  void backward():
+  void left();
+  void right();
+
+int main()
+{ 
+  forward();
+  backward(); 
+  left();
+  right();
+  return 0;
+}
+
+//FUNCTION DEFINITIONS 
+void forward()
+{
+  printf("robot moving forward\n");
+  motor(lmotor,speed);
+  motor(rmotor,speed);
+  msleep(dak);
+  ao();
+}
+
+void backward()
+{ 
+ printf("robot moving backward\n");
+  motor(lmotor,-speed);
+  motor(rmotor,-speed);
+  msleep(dak);
+  ao();
+}
+
+void left()
+{
+printf("robot turning left\n");
+	motor(lmotor,speed);
+	motor(rmotor,-speed);
+	msleep(pause);
+	ao();
+}
+
+void right()
+{
+ printf("robot turning right\n");
+	motor(lmotor,-speed);
+	motor(rmotor,speed);
+	msleep(pause);
+	ao();
+}
